@@ -4,4 +4,4 @@ var HelloMessage = React.createClass({
           }
 });
 
-React.render(<HelloMessage name="Yeah" />, mountNode);
+React.render(<HelloMessage name="Unko" />, mountNode);
