@@ -1,0 +1,11 @@
+{
+  "name": "untitle",
+  "version": "0.0.0",
+  "description": "",
+  "author": "funnythingz",
+  "license": "BSD",
+  "devDependencies": {
+    "gulp": "",
+    "gulp-react": ""
+  }
+}
