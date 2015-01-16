@@ -6,6 +6,16 @@
   "license": "BSD",
   "devDependencies": {
     "gulp": "",
-    "gulp-react": ""
+    "gulp-react": "",
+    "gulp-typescript": "",
+    "gulp-compass": "",
+    "gulp-slim": "",
+    "gulp-concat": "",
+    "gulp-uglify": "",
+    "gulp-webserver": "",
+    "gulp-plumber": "",
+    "rimraf": "",
+    "run-sequence": "",
+    "event-stream": ""
   }
 }
