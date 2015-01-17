@@ -1,23 +1,3 @@
-// TODO: React
-//var gulp = require('gulp');
-//var react = require('gulp-react');
-//
-//gulp.task('jsx', function() {
-//  return gulp.src('src/jsx/**/*.jsx')
-//                               .pipe(react())
-//                               .pipe(gulp.dest('dist'));
-//});
-//
-//gulp.task('watch', function() {
-//  return gulp.watch('src/jsx/**/*.jsx', function(event) {
-//                                  gulp.run('jsx');
-//                                 });
-//});
-//
-//gulp.task('default', function() {
-//  gulp.run('watch');
-//});
-
 var gulp = require('gulp');
 var typescript = require('gulp-typescript');
 var compass = require('gulp-compass');
@@ -42,11 +22,11 @@ gulp.task('clean', function(cb) {
 
 gulp.task('typescript', function() {
   return gulp.src(['src/ts/*.ts'])
-                               .pipe(plumber())
-                               .pipe(typescript(tsProject, {referencedFrom: ['app.ts']}))
-                               .js
-                               .pipe(concat("app.js"))
-                               .pipe(gulp.dest('dist/js/'));
+                            .pipe(plumber())
+                            .pipe(typescript(tsProject, {referencedFrom: ['app.ts']}))
+                            .js
+                            .pipe(concat("app.js"))
+                            .pipe(gulp.dest('dist/js/'));
 });
 
 gulp.task('compass', function() {
@@ -83,7 +63,6 @@ gulp.task('copy', function() {
     gulp.src([
       './lib/underscore/underscore-min.js',
       './lib/jquery/dist/jquery.min.js',
-      './lib/jquery.inview/jquery.inview.min.js',
       './lib/fastclick/lib/fastclick.js',
       './vendor/js/*.js'
     ]).pipe(gulp.dest('dist/js/')),
