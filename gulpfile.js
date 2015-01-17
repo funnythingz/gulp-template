@@ -17,7 +17,7 @@ var tsProject = typescript.createProject({
 });
 
 gulp.task('clean', function(cb) {
-  rimraf('build', cb);
+  rimraf('dist', cb);
 });
 
 gulp.task('typescript', function() {
@@ -61,9 +61,9 @@ gulp.task('compress', function() {
 gulp.task('copy', function() {
   return merge(
     gulp.src([
-      './lib/underscore/underscore-min.js',
-      './lib/jquery/dist/jquery.min.js',
-      './lib/fastclick/lib/fastclick.js',
+      './bower_components/underscore/underscore-min.js',
+      './bower_components/jquery/dist/jquery.min.js',
+      './bower_components/fastclick/lib/fastclick.js',
       './vendor/js/*.js'
     ]).pipe(gulp.dest('dist/js/')),
 
