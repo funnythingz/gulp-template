@@ -93,22 +93,20 @@ gulp.task('watch', ['build'], function() {
   gulp.watch(['src/slim/*.slim', 'src/ts/*.ts', 'src/scss/*.scss', 'assets/*.*'], ['build', 'assets']);
 });
 
-gulp.task('build', function(callback) {
+gulp.task('build', function() {
   runSequence(
     'typescript',
     'compress',
     'slim',
-    'compass',
-    callback
+    'compass'
   );
 });
 
-gulp.task('default', function(callback) {
+gulp.task('default', function() {
   runSequence(
     'clean',
     ['copy', 'assets'],
     'watch',
-    'webserver',
-    callback
+    'webserver'
   );
 });
