@@ -23,7 +23,7 @@ gulp.task('clean', function(cb) {
 gulp.task('typescript', function() {
   return gulp.src(['src/ts/*.ts'])
                             .pipe(plumber())
-                            .pipe(typescript(tsProject, {referencedFrom: ['app.ts']}))
+                            .pipe(typescript(tsProject))
                             .js
                             .pipe(concat("app.js"))
                             .pipe(gulp.dest('dist/js/'));
